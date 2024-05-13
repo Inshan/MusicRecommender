@@ -1,0 +1,16 @@
+{% extends "recommendpg/base.html" %}
+{% block content %}
+    <div class="container">
+        <form class="border border-light p-5" action="#!" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-gradient" type="submit">Register</button>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already have an account? <a class="ml-2" href="{% url 'login' %}">Login</a>
+                </small>
+            </div>
+        </form>
+    </div>
+    <!-- Default form register -->
+{% endblock content %}
